@@ -1,0 +1,51 @@
+{
+  "entities": {
+    "QuestionnaireSubmission": {
+      "title": "QuestionnaireSubmission",
+      "description": "A questionnaire submission containing answers, company metadata, calculated scores, and AI feedback.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier of the submission."
+        },
+        "companyName": {
+          "type": "string",
+          "description": "Name of the firm."
+        },
+        "industry": {
+          "type": "string",
+          "description": "Industry sector of the firm."
+        },
+        "size": {
+          "type": "string",
+          "description": "Size category of the firm."
+        },
+        "role": {
+          "type": "string",
+          "description": "Role of the person completing the form."
+        },
+        "answers": {
+          "type": "object",
+          "description": "The custom 35 answers and extra text inputs."
+        },
+        "evaluation": {
+          "type": "object",
+          "description": "The evaluated scores and textual reports of the RESONETI 4R Index."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The timestamp indicating when the form was submitted."
+        }
+      },
+      "required": ["companyName", "answers", "createdAt"]
+    }
+  },
+  "firestore": {
+    "submissions/{submissionId}": {
+      "schema": "QuestionnaireSubmission",
+      "description": "Collection storing all completed RESONETI 4R Index diagnostics."
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "RESONETI Index",
+  "description": "Automatizovaný diagnostický nástroj na vyhodnocení připravenosti firmy na technologickou transformaci s důrazem na lidský faktor a okamžitou zpětnou vazbou.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
